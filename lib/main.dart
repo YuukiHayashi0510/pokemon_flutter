@@ -22,14 +22,27 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text(
-          'Hello World',
-          style: TextStyle(
-            fontSize: 36,
-          ),
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+              height: 100,
+              width: 100,
+            ),
+            const Text(
+              'pikachu',
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            ),
+            // Chipでの実装ver
+            // const Chip(
+            //   label: Text('electric'),
+            //   backgroundColor: Colors.yellow,
+            // ),
+            
+        ]),
       ),
     );
   }
