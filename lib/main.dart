@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './poke_list_item.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,16 +14,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const TopPage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class TopPage extends StatelessWidget {
+  const TopPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -68,6 +70,14 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
         ]),
+=======
+      body: SafeArea(
+        child: ListView.builder(
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
+          itemCount: 898,
+          itemBuilder: (context, index) => PokeListItem(index: index),
+        ),
+>>>>>>> step3
       ),
     );
   }
