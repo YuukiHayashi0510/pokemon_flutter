@@ -24,7 +24,6 @@ class TopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -70,14 +69,6 @@ class TopPage extends StatelessWidget {
               ),
             ),
         ]),
-=======
-      body: SafeArea(
-        child: ListView.builder(
-          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
-          itemCount: 898,
-          itemBuilder: (context, index) => PokeListItem(index: index),
-        ),
->>>>>>> step3
       ),
     );
   }
