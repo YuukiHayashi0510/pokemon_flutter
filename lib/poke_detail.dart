@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 
 class PokeDetail extends StatelessWidget {
   const PokeDetail({Key? key}) : super(key: key);
@@ -44,6 +45,16 @@ class PokeDetail extends StatelessWidget {
                         ? Colors.black
                         : Colors.white),
               ),
+            ),
+            ElevatedButton(
+              child: const Text('main'),
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => const TopPage(),
+                  ),
+                ),
+              },
             ),
           ],
         ),
