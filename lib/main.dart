@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import './poke_list_item.dart';
-import './poke_detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,41 +26,26 @@ class TopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: const [
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-          PikaButton(),
-        ],
-      ),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index) => PokeListItem(index: index)),
     );
   }
 }
 
-class PikaButton extends StatelessWidget {
-  const PikaButton({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      child: const Text('pikachu'),
-      onPressed: () => {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context) => const PokeDetail(),
-          ),
-        ),
-      },
-    );
-  }
-}
+// class PikaButton extends StatelessWidget {
+//   const PikaButton({Key? key, int? index}) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return ElevatedButton(
+//       child: const Text('pikachu'),
+//       onPressed: () => {
+//         Navigator.of(context).push(
+//           MaterialPageRoute(
+//             builder: (BuildContext context) => const PokeDetail(),
+//           ),
+//         ),
+//       },
+//     );
+//   }
+// }
